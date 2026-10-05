@@ -1,0 +1,166 @@
+{
+  "linux_release": {
+    "commands": [
+      {
+        "exit_code": 0,
+        "checks": []
+      },
+      {
+        "exit_code": 0,
+        "checks": [
+          "redis_dns_test",
+          "redis_transport_test"
+        ]
+      },
+      {
+        "exit_code": 0,
+        "checks": [
+          "^(redis_dns|redis_transport)$"
+        ]
+      }
+    ],
+    "passed": true,
+    "test_sha256": "a7c5aa7f2843a39942b0a14b48a3f733c5177a49f6b5b858dc528f43877eff07",
+    "source_sha256": "cf7afba7db665737d167503d728c25a0bfe84fdcf476ab86f74a24440e62fb58",
+    "sanitizer_reports": [],
+    "original_summary_sha256": "5274e39e378c6098616bd8c34f04f6fd44e7d866a67bb57c586a7d9324ae2eaf"
+  },
+  "linux_sanitizers": {
+    "commands": [
+      {
+        "exit_code": 0,
+        "checks": []
+      },
+      {
+        "exit_code": 0,
+        "checks": [
+          "redis_dns_test",
+          "redis_transport_test"
+        ]
+      },
+      {
+        "exit_code": 0,
+        "checks": [
+          "^(redis_dns|redis_transport)$"
+        ]
+      }
+    ],
+    "passed": true,
+    "test_sha256": "e2b193cbf30296e90aed313f61623c5bb49a43e3fc174a84fe13b7046eeae0c8",
+    "source_sha256": "cf7afba7db665737d167503d728c25a0bfe84fdcf476ab86f74a24440e62fb58",
+    "sanitizer_reports": [],
+    "original_summary_sha256": "1b60355dfaedc6deb88d851a42fb73578b2b679af0f616062bf5bb9613e6b485"
+  },
+  "windows_console": {
+    "server_sha256": "990a5ffe0c9911f72c4f34a2e1722d8490ea216428248911fb08f6ce7e14ac0e",
+    "harness_sha256": "95a1023acbd6421182ad10f0509e533edb269c75ec76441ee31ce1d7890c7184",
+    "cases": [
+      {
+        "event": "CTRL_C_EVENT",
+        "protocol": "text_v1",
+        "shutdown_budget_ms": 1000,
+        "scheduling_margin_seconds": 0.75,
+        "mysql_enabled": false,
+        "redis_enabled": false,
+        "passed": true,
+        "ctrl_c_ignore_cleared_before_server": true,
+        "console_isolated": true,
+        "console_event_generated": true,
+        "server_exit_code": 0,
+        "shutdown_seconds": 0.531,
+        "idle_and_partial_peers_closed": true,
+        "listener_closed": true,
+        "shutdown_log_sequence": [
+          "shutdown: accept stopped",
+          "shutdown: transports closed",
+          "shutdown: transports drained",
+          "shutdown: complete"
+        ],
+        "worker_received_events": [
+          0
+        ],
+        "worker_exit_code": 0
+      },
+      {
+        "event": "CTRL_C_EVENT",
+        "protocol": "proto_v1",
+        "shutdown_budget_ms": 1000,
+        "scheduling_margin_seconds": 0.75,
+        "mysql_enabled": false,
+        "redis_enabled": false,
+        "passed": true,
+        "ctrl_c_ignore_cleared_before_server": true,
+        "console_isolated": true,
+        "console_event_generated": true,
+        "server_exit_code": 0,
+        "shutdown_seconds": 0.265,
+        "idle_and_partial_peers_closed": true,
+        "listener_closed": true,
+        "shutdown_log_sequence": [
+          "shutdown: accept stopped",
+          "shutdown: transports closed",
+          "shutdown: transports drained",
+          "shutdown: complete"
+        ],
+        "worker_received_events": [
+          0
+        ],
+        "worker_exit_code": 0
+      },
+      {
+        "event": "CTRL_BREAK_EVENT",
+        "protocol": "text_v1",
+        "shutdown_budget_ms": 1000,
+        "scheduling_margin_seconds": 0.75,
+        "mysql_enabled": false,
+        "redis_enabled": false,
+        "passed": true,
+        "ctrl_c_ignore_cleared_before_server": true,
+        "console_isolated": true,
+        "console_event_generated": true,
+        "server_exit_code": 0,
+        "shutdown_seconds": 0.515,
+        "idle_and_partial_peers_closed": true,
+        "listener_closed": true,
+        "shutdown_log_sequence": [
+          "shutdown: accept stopped",
+          "shutdown: transports closed",
+          "shutdown: transports drained",
+          "shutdown: complete"
+        ],
+        "worker_received_events": [
+          1
+        ],
+        "worker_exit_code": 0
+      },
+      {
+        "event": "CTRL_BREAK_EVENT",
+        "protocol": "proto_v1",
+        "shutdown_budget_ms": 1000,
+        "scheduling_margin_seconds": 0.75,
+        "mysql_enabled": false,
+        "redis_enabled": false,
+        "passed": true,
+        "ctrl_c_ignore_cleared_before_server": true,
+        "console_isolated": true,
+        "console_event_generated": true,
+        "server_exit_code": 0,
+        "shutdown_seconds": 0.266,
+        "idle_and_partial_peers_closed": true,
+        "listener_closed": true,
+        "shutdown_log_sequence": [
+          "shutdown: accept stopped",
+          "shutdown: transports closed",
+          "shutdown: transports drained",
+          "shutdown: complete"
+        ],
+        "worker_received_events": [
+          1
+        ],
+        "worker_exit_code": 0
+      }
+    ],
+    "passed": true,
+    "original_summary_sha256": "38951c6aaab9bbe6509a6e1b1165c94ac1359525b39290ea54bae580bc236c79"
+  }
+}

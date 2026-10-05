@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "protocol": "text_v1",
+      "scenario": "live_and_terminal_graceful_restart",
+      "passed": true,
+      "live_stop": {
+        "signal": "SIGTERM",
+        "exit_code": 0,
+        "elapsed_ms": 32.226
+      },
+      "terminal_stop": {
+        "signal": "SIGINT",
+        "exit_code": 0,
+        "elapsed_ms": 31.942
+      },
+      "final_stop": {
+        "signal": "SIGTERM",
+        "exit_code": 0,
+        "elapsed_ms": 64.194
+      },
+      "checkpoint_identical": true,
+      "original_ack_identical": true,
+      "absolute_deadline_preserved": true,
+      "terminal_idempotency": true
+    },
+    {
+      "protocol": "proto_v1",
+      "scenario": "live_and_terminal_graceful_restart",
+      "passed": true,
+      "live_stop": {
+        "signal": "SIGTERM",
+        "exit_code": 0,
+        "elapsed_ms": 115.114
+      },
+      "terminal_stop": {
+        "signal": "SIGINT",
+        "exit_code": 0,
+        "elapsed_ms": 114.673
+      },
+      "final_stop": {
+        "signal": "SIGTERM",
+        "exit_code": 0,
+        "elapsed_ms": 114.444
+      },
+      "checkpoint_identical": true,
+      "original_ack_identical": true,
+      "absolute_deadline_preserved": true,
+      "terminal_idempotency": true
+    }
+  ],
+  "server_sha256": "baf0c437cbb54f021cdb90d97928daf1139867ce85841d56f7690e8e8b6db6e9",
+  "harness_sha256": "57f043e68c6faed1f7dc629b54789eb497ff2c5160cde0c649ace3a704a98587",
+  "configuration": {
+    "ARENA_ROOM_RECOVERY": "1",
+    "ARENA_MYSQL_CLEANUP_RUNNING": "0",
+    "ARENA_REDIS_FAIL_APPLY_COUNT": "0",
+    "ARENA_HEARTBEAT_TIMEOUT_MS": "30000",
+    "ARENA_SHUTDOWN_TIMEOUT_MS": "2000"
+  },
+  "sanitizer_reports": [],
+  "fixtures_cleaned": true
+}

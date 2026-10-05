@@ -1,0 +1,1410 @@
+{
+  "attempted_rounds": 20,
+  "clients": 20,
+  "completed_rounds": 20,
+  "docker": {
+    "available": true,
+    "containers": {
+      "arena-cards-mysql": {
+        "peak_cpu_percent": 0.68,
+        "peak_memory_bytes": 414502092,
+        "samples": 1
+      },
+      "arena-cards-redis": {
+        "peak_cpu_percent": 3.49,
+        "peak_memory_bytes": 8158969,
+        "samples": 1
+      },
+      "arena-cards-server": {
+        "peak_cpu_percent": 18.27,
+        "peak_memory_bytes": 5702156,
+        "samples": 1
+      }
+    },
+    "sample_count": 1
+  },
+  "duration_ms": 740.996,
+  "exit_code": 0,
+  "latency": {
+    "action_ack": {
+      "count": 400,
+      "max_ms": 12.145,
+      "p50_ms": 1.642,
+      "p95_ms": 2.625,
+      "p99_ms": 3.687
+    },
+    "completed_round": {
+      "count": 20,
+      "max_ms": 716.707,
+      "p50_ms": 514.713,
+      "p95_ms": 716.608,
+      "p99_ms": 716.707
+    }
+  },
+  "port": 9000,
+  "results": [
+    {
+      "bot": "load1",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 8.49,
+          "p50_ms": 1.634,
+          "p95_ms": 2.832,
+          "p99_ms": 8.49
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 15.19,
+          "p50_ms": 15.19,
+          "p95_ms": 15.19,
+          "p99_ms": 15.19
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 46.496,
+          "p50_ms": 46.496,
+          "p95_ms": 46.496,
+          "p99_ms": 46.496
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 702.771,
+          "p50_ms": 702.771,
+          "p95_ms": 702.771,
+          "p99_ms": 702.771
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.259,
+            1.0,
+            8.49,
+            1.096,
+            1.474,
+            1.495,
+            0.909,
+            1.961,
+            1.823,
+            2.086,
+            1.698,
+            1.483,
+            2.395,
+            2.004,
+            2.832,
+            2.55,
+            1.634,
+            1.881,
+            1.619,
+            1.313
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 702.771,
+          "errors": [],
+          "matchmaking_ms": 46.496,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load2",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 2.758,
+          "p50_ms": 1.516,
+          "p95_ms": 2.379,
+          "p99_ms": 2.758
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 15.048,
+          "p50_ms": 15.048,
+          "p95_ms": 15.048,
+          "p99_ms": 15.048
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 46.644,
+          "p50_ms": 46.644,
+          "p95_ms": 46.644,
+          "p99_ms": 46.644
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 702.697,
+          "p50_ms": 702.697,
+          "p95_ms": 702.697,
+          "p99_ms": 702.697
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.099,
+            0.891,
+            1.503,
+            1.282,
+            1.292,
+            1.425,
+            1.631,
+            2.379,
+            2.224,
+            2.758,
+            1.839,
+            1.359,
+            2.35,
+            1.688,
+            2.244,
+            1.375,
+            1.828,
+            2.099,
+            1.516,
+            1.194
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 702.697,
+          "errors": [],
+          "matchmaking_ms": 46.644,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load3",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 2.6,
+          "p50_ms": 1.563,
+          "p95_ms": 2.431,
+          "p99_ms": 2.6
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 15.333,
+          "p50_ms": 15.333,
+          "p95_ms": 15.333,
+          "p99_ms": 15.333
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 42.193,
+          "p50_ms": 42.193,
+          "p95_ms": 42.193,
+          "p99_ms": 42.193
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 353.7,
+          "p50_ms": 353.7,
+          "p95_ms": 353.7,
+          "p99_ms": 353.7
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            0.815,
+            0.998,
+            1.208,
+            1.276,
+            1.249,
+            1.99,
+            1.16,
+            1.35,
+            1.728,
+            1.563,
+            1.603,
+            2.053,
+            2.044,
+            2.045,
+            2.326,
+            1.835,
+            1.428,
+            2.431,
+            1.476,
+            2.6
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 353.7,
+          "errors": [],
+          "matchmaking_ms": 42.193,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load4",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 12.145,
+          "p50_ms": 1.587,
+          "p95_ms": 2.969,
+          "p99_ms": 12.145
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 15.234,
+          "p50_ms": 15.234,
+          "p95_ms": 15.234,
+          "p99_ms": 15.234
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 42.223,
+          "p50_ms": 42.223,
+          "p95_ms": 42.223,
+          "p99_ms": 42.223
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 353.731,
+          "p50_ms": 353.731,
+          "p95_ms": 353.731,
+          "p99_ms": 353.731
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            0.921,
+            1.632,
+            12.145,
+            1.135,
+            1.454,
+            0.97,
+            1.231,
+            1.288,
+            1.903,
+            1.55,
+            1.48,
+            1.748,
+            1.438,
+            2.103,
+            2.25,
+            2.969,
+            2.062,
+            1.733,
+            1.76,
+            1.587
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 353.731,
+          "errors": [],
+          "matchmaking_ms": 42.223,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load5",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 4.297,
+          "p50_ms": 1.71,
+          "p95_ms": 2.78,
+          "p99_ms": 4.297
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 15.534,
+          "p50_ms": 15.534,
+          "p95_ms": 15.534,
+          "p99_ms": 15.534
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 60.697,
+          "p50_ms": 60.697,
+          "p95_ms": 60.697,
+          "p99_ms": 60.697
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 716.707,
+          "p50_ms": 716.707,
+          "p95_ms": 716.707,
+          "p99_ms": 716.707
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.793,
+            1.477,
+            1.255,
+            1.584,
+            0.914,
+            0.907,
+            1.147,
+            1.287,
+            1.71,
+            1.875,
+            1.792,
+            2.046,
+            2.014,
+            1.539,
+            1.795,
+            2.48,
+            2.78,
+            2.413,
+            1.707,
+            4.297
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 716.707,
+          "errors": [],
+          "matchmaking_ms": 60.697,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load6",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 2.258,
+          "p50_ms": 1.478,
+          "p95_ms": 2.005,
+          "p99_ms": 2.258
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 15.39,
+          "p50_ms": 15.39,
+          "p95_ms": 15.39,
+          "p99_ms": 15.39
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 60.773,
+          "p50_ms": 60.773,
+          "p95_ms": 60.773,
+          "p99_ms": 60.773
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 716.608,
+          "p50_ms": 716.608,
+          "p95_ms": 716.608,
+          "p99_ms": 716.608
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.928,
+            1.26,
+            1.363,
+            1.035,
+            0.996,
+            0.814,
+            1.478,
+            1.326,
+            1.337,
+            1.642,
+            1.693,
+            1.368,
+            1.58,
+            1.624,
+            1.345,
+            2.005,
+            2.258,
+            1.865,
+            1.855,
+            1.775
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 716.608,
+          "errors": [],
+          "matchmaking_ms": 60.773,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load7",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 3.264,
+          "p50_ms": 1.535,
+          "p95_ms": 2.774,
+          "p99_ms": 3.264
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 15.624,
+          "p50_ms": 15.624,
+          "p95_ms": 15.624,
+          "p99_ms": 15.624
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 79.479,
+          "p50_ms": 79.479,
+          "p95_ms": 79.479,
+          "p99_ms": 79.479
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 400.32,
+          "p50_ms": 400.32,
+          "p95_ms": 400.32,
+          "p99_ms": 400.32
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.109,
+            0.806,
+            0.847,
+            0.875,
+            1.181,
+            1.241,
+            1.689,
+            1.661,
+            1.535,
+            1.321,
+            2.774,
+            1.833,
+            2.117,
+            2.613,
+            2.526,
+            1.543,
+            1.439,
+            1.692,
+            3.264,
+            1.177
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 400.32,
+          "errors": [],
+          "matchmaking_ms": 79.479,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load8",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 3.167,
+          "p50_ms": 1.79,
+          "p95_ms": 2.525,
+          "p99_ms": 3.167
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 15.776,
+          "p50_ms": 15.776,
+          "p95_ms": 15.776,
+          "p99_ms": 15.776
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 79.209,
+          "p50_ms": 79.209,
+          "p95_ms": 79.209,
+          "p99_ms": 79.209
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 400.247,
+          "p50_ms": 400.247,
+          "p95_ms": 400.247,
+          "p99_ms": 400.247
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.039,
+            0.909,
+            0.939,
+            1.001,
+            1.033,
+            1.219,
+            1.726,
+            1.867,
+            2.268,
+            2.182,
+            1.79,
+            1.75,
+            1.261,
+            2.525,
+            2.171,
+            2.034,
+            2.293,
+            3.167,
+            2.023,
+            2.047
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 400.247,
+          "errors": [],
+          "matchmaking_ms": 79.209,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load9",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 8.194,
+          "p50_ms": 1.457,
+          "p95_ms": 2.432,
+          "p99_ms": 8.194
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 15.931,
+          "p50_ms": 15.931,
+          "p95_ms": 15.931,
+          "p99_ms": 15.931
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 45.591,
+          "p50_ms": 45.591,
+          "p95_ms": 45.591,
+          "p99_ms": 45.591
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 320.853,
+          "p50_ms": 320.853,
+          "p95_ms": 320.853,
+          "p99_ms": 320.853
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.03,
+            0.899,
+            8.194,
+            1.316,
+            1.164,
+            1.19,
+            1.137,
+            2.273,
+            1.457,
+            1.301,
+            1.38,
+            1.791,
+            2.312,
+            2.05,
+            1.719,
+            1.811,
+            1.692,
+            1.347,
+            2.432,
+            2.262
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 320.853,
+          "errors": [],
+          "matchmaking_ms": 45.591,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load10",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 2.678,
+          "p50_ms": 1.641,
+          "p95_ms": 2.249,
+          "p99_ms": 2.678
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 16.057,
+          "p50_ms": 16.057,
+          "p95_ms": 16.057,
+          "p99_ms": 16.057
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 41.263,
+          "p50_ms": 41.263,
+          "p95_ms": 41.263,
+          "p99_ms": 41.263
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 321.113,
+          "p50_ms": 321.113,
+          "p95_ms": 321.113,
+          "p99_ms": 321.113
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            0.926,
+            0.9,
+            1.307,
+            1.304,
+            1.097,
+            1.92,
+            1.139,
+            1.383,
+            1.429,
+            1.525,
+            1.641,
+            2.249,
+            1.645,
+            1.927,
+            1.938,
+            2.191,
+            2.02,
+            2.003,
+            2.168,
+            2.678
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 321.113,
+          "errors": [],
+          "matchmaking_ms": 41.263,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load11",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 2.752,
+          "p50_ms": 1.854,
+          "p95_ms": 2.625,
+          "p99_ms": 2.752
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 16.491,
+          "p50_ms": 16.491,
+          "p95_ms": 16.491,
+          "p99_ms": 16.491
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 93.451,
+          "p50_ms": 93.451,
+          "p95_ms": 93.451,
+          "p99_ms": 93.451
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 455.4,
+          "p50_ms": 455.4,
+          "p95_ms": 455.4,
+          "p99_ms": 455.4
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.194,
+            1.146,
+            0.886,
+            0.983,
+            1.616,
+            1.114,
+            1.741,
+            2.387,
+            1.966,
+            1.289,
+            2.752,
+            2.4,
+            2.469,
+            2.28,
+            1.854,
+            2.602,
+            1.916,
+            1.297,
+            2.44,
+            2.625
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 455.4,
+          "errors": [],
+          "matchmaking_ms": 93.451,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load12",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 3.46,
+          "p50_ms": 1.556,
+          "p95_ms": 2.175,
+          "p99_ms": 3.46
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 16.211,
+          "p50_ms": 16.211,
+          "p95_ms": 16.211,
+          "p99_ms": 16.211
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 93.734,
+          "p50_ms": 93.734,
+          "p95_ms": 93.734,
+          "p99_ms": 93.734
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 455.438,
+          "p50_ms": 455.438,
+          "p95_ms": 455.438,
+          "p99_ms": 455.438
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.58,
+            0.981,
+            0.859,
+            0.934,
+            1.068,
+            1.556,
+            1.031,
+            2.175,
+            1.666,
+            1.203,
+            1.64,
+            1.442,
+            1.167,
+            2.14,
+            2.165,
+            1.584,
+            3.46,
+            1.71,
+            1.214,
+            1.665
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 455.438,
+          "errors": [],
+          "matchmaking_ms": 93.734,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load13",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 2.463,
+          "p50_ms": 1.732,
+          "p95_ms": 2.195,
+          "p99_ms": 2.463
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 16.824,
+          "p50_ms": 16.824,
+          "p95_ms": 16.824,
+          "p99_ms": 16.824
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 106.83,
+          "p50_ms": 106.83,
+          "p95_ms": 106.83,
+          "p99_ms": 106.83
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 514.677,
+          "p50_ms": 514.677,
+          "p95_ms": 514.677,
+          "p99_ms": 514.677
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.732,
+            1.079,
+            0.902,
+            0.903,
+            0.849,
+            0.983,
+            1.841,
+            1.781,
+            2.09,
+            1.504,
+            1.793,
+            2.195,
+            1.905,
+            2.081,
+            2.463,
+            1.692,
+            1.671,
+            2.035,
+            1.863,
+            0.987
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 514.677,
+          "errors": [],
+          "matchmaking_ms": 106.83,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load14",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 3.407,
+          "p50_ms": 1.725,
+          "p95_ms": 2.88,
+          "p99_ms": 3.407
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 16.997,
+          "p50_ms": 16.997,
+          "p95_ms": 16.997,
+          "p99_ms": 16.997
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 106.699,
+          "p50_ms": 106.699,
+          "p95_ms": 106.699,
+          "p99_ms": 106.699
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 514.713,
+          "p50_ms": 514.713,
+          "p95_ms": 514.713,
+          "p99_ms": 514.713
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.536,
+            0.831,
+            0.854,
+            0.767,
+            1.055,
+            1.725,
+            1.477,
+            2.088,
+            2.198,
+            1.561,
+            1.834,
+            2.463,
+            1.812,
+            2.013,
+            3.407,
+            1.952,
+            1.575,
+            2.88,
+            1.773,
+            1.112
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 514.713,
+          "errors": [],
+          "matchmaking_ms": 106.699,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load15",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 3.008,
+          "p50_ms": 1.482,
+          "p95_ms": 2.535,
+          "p99_ms": 3.008
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 17.246,
+          "p50_ms": 17.246,
+          "p95_ms": 17.246,
+          "p99_ms": 17.246
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 121.994,
+          "p50_ms": 121.994,
+          "p95_ms": 121.994,
+          "p99_ms": 121.994
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 669.35,
+          "p50_ms": 669.35,
+          "p95_ms": 669.35,
+          "p99_ms": 669.35
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.225,
+            1.21,
+            1.471,
+            1.482,
+            1.491,
+            1.919,
+            2.306,
+            2.007,
+            2.535,
+            3.008,
+            1.83,
+            1.628,
+            1.935,
+            1.473,
+            1.933,
+            0.89,
+            0.97,
+            0.797,
+            0.909,
+            0.953
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 669.35,
+          "errors": [],
+          "matchmaking_ms": 121.994,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load16",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 2.338,
+          "p50_ms": 1.642,
+          "p95_ms": 2.284,
+          "p99_ms": 2.338
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 17.419,
+          "p50_ms": 17.419,
+          "p95_ms": 17.419,
+          "p99_ms": 17.419
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 121.781,
+          "p50_ms": 121.781,
+          "p95_ms": 121.781,
+          "p99_ms": 121.781
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 669.296,
+          "p50_ms": 669.296,
+          "p95_ms": 669.296,
+          "p99_ms": 669.296
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.177,
+            1.66,
+            1.097,
+            1.642,
+            1.569,
+            1.495,
+            1.947,
+            2.284,
+            1.776,
+            1.922,
+            2.338,
+            1.482,
+            1.96,
+            1.75,
+            1.889,
+            1.646,
+            0.755,
+            0.775,
+            0.74,
+            0.701
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 669.296,
+          "errors": [],
+          "matchmaking_ms": 121.781,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load17",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 3.687,
+          "p50_ms": 1.59,
+          "p95_ms": 2.4,
+          "p99_ms": 3.687
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 18.216,
+          "p50_ms": 18.216,
+          "p95_ms": 18.216,
+          "p99_ms": 18.216
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 134.083,
+          "p50_ms": 134.083,
+          "p95_ms": 134.083,
+          "p99_ms": 134.083
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 621.115,
+          "p50_ms": 621.115,
+          "p95_ms": 621.115,
+          "p99_ms": 621.115
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            2.117,
+            1.063,
+            1.43,
+            2.076,
+            2.108,
+            1.59,
+            2.358,
+            1.643,
+            2.4,
+            3.687,
+            1.547,
+            1.401,
+            2.245,
+            1.968,
+            1.789,
+            1.35,
+            0.844,
+            1.136,
+            0.831,
+            0.91
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 621.115,
+          "errors": [],
+          "matchmaking_ms": 134.083,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load18",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 2.589,
+          "p50_ms": 1.56,
+          "p95_ms": 2.586,
+          "p99_ms": 2.589
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 18.507,
+          "p50_ms": 18.507,
+          "p95_ms": 18.507,
+          "p99_ms": 18.507
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 150.992,
+          "p50_ms": 150.992,
+          "p95_ms": 150.992,
+          "p99_ms": 150.992
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 645.698,
+          "p50_ms": 645.698,
+          "p95_ms": 645.698,
+          "p99_ms": 645.698
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.293,
+            2.589,
+            2.209,
+            2.586,
+            1.757,
+            1.884,
+            2.2,
+            1.979,
+            1.56,
+            2.28,
+            1.847,
+            1.401,
+            2.001,
+            1.289,
+            1.008,
+            0.911,
+            0.93,
+            0.94,
+            0.766,
+            1.145
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 645.698,
+          "errors": [],
+          "matchmaking_ms": 150.992,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load19",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 2.895,
+          "p50_ms": 1.597,
+          "p95_ms": 2.788,
+          "p99_ms": 2.895
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 18.36,
+          "p50_ms": 18.36,
+          "p95_ms": 18.36,
+          "p99_ms": 18.36
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 133.899,
+          "p50_ms": 133.899,
+          "p95_ms": 133.899,
+          "p99_ms": 133.899
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 621.039,
+          "p50_ms": 621.039,
+          "p95_ms": 621.039,
+          "p99_ms": 621.039
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            1.224,
+            1.717,
+            1.666,
+            1.597,
+            1.916,
+            2.06,
+            2.378,
+            2.788,
+            2.895,
+            2.191,
+            1.496,
+            1.842,
+            1.892,
+            1.167,
+            1.162,
+            0.963,
+            0.976,
+            0.98,
+            1.061,
+            0.925
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 621.039,
+          "errors": [],
+          "matchmaking_ms": 133.899,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    },
+    {
+      "bot": "load20",
+      "completed_rounds": 1,
+      "errors": 0,
+      "latencies": {
+        "action_ack": {
+          "count": 20,
+          "max_ms": 2.617,
+          "p50_ms": 1.493,
+          "p95_ms": 2.367,
+          "p99_ms": 2.617
+        },
+        "login": {
+          "count": 1,
+          "max_ms": 19.342,
+          "p50_ms": 19.342,
+          "p95_ms": 19.342,
+          "p99_ms": 19.342
+        },
+        "matchmaking": {
+          "count": 1,
+          "max_ms": 150.176,
+          "p50_ms": 150.176,
+          "p95_ms": 150.176,
+          "p99_ms": 150.176
+        },
+        "round": {
+          "count": 1,
+          "max_ms": 645.634,
+          "p50_ms": 645.634,
+          "p95_ms": 645.634,
+          "p99_ms": 645.634
+        }
+      },
+      "rounds": [
+        {
+          "action_latency_ms": [
+            2.367,
+            2.367,
+            2.35,
+            1.711,
+            1.899,
+            1.846,
+            1.486,
+            2.253,
+            2.617,
+            2.07,
+            1.774,
+            1.493,
+            1.2,
+            1.152,
+            0.845,
+            0.933,
+            1.048,
+            0.855,
+            0.848,
+            1.158
+          ],
+          "actions": 20,
+          "completed": true,
+          "duration_ms": 645.634,
+          "errors": [],
+          "matchmaking_ms": 150.176,
+          "round": 1,
+          "winner": "0"
+        }
+      ]
+    }
+  ],
+  "rounds_per_client": 1,
+  "success_rate": 1.0,
+  "throughput_rounds_per_sec": 26.991
+}

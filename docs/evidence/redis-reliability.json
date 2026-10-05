@@ -1,0 +1,493 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "protocol": "text_v1",
+      "scenario": "blackhole",
+      "passed": true,
+      "simultaneous_rooms": 2,
+      "results_delivered_before_restore": 4,
+      "observed_commit_to_both_rooms_results_ms": 0,
+      "terminal_action_to_both_results_ms": [
+        39.939,
+        52.721
+      ],
+      "result_bound_ms": 2000,
+      "fault_duration_ms": 2808.606,
+      "outbox_during_fault": [
+        {
+          "status": "pending",
+          "attempts": 2,
+          "last_error": "Redis response read timed out"
+        },
+        {
+          "status": "pending",
+          "attempts": 0,
+          "last_error": ""
+        }
+      ],
+      "outbox_after_restore": [
+        {
+          "status": "applied",
+          "attempts": 2,
+          "last_error": ""
+        },
+        {
+          "status": "applied",
+          "attempts": 0,
+          "last_error": ""
+        }
+      ],
+      "fault_metrics": {
+        "text_v1": {
+          "active_rooms": 0,
+          "active_sessions": 5,
+          "room_commands_enqueued": 86,
+          "room_commands_processed": 86,
+          "room_command_queue_high_watermark": 1,
+          "send_frames_enqueued": 418,
+          "send_frames_dropped": 0,
+          "send_queue_high_watermark_bytes": 1333,
+          "settlements_started": 2,
+          "settlements_succeeded": 2,
+          "settlements_failed": 0,
+          "settlement_retries": 0,
+          "settlement_latency_ms_total": 41,
+          "settlement_latency_ms_max": 24,
+          "settlement_outbox_applied": 0,
+          "settlement_outbox_failures": 2,
+          "settlement_outbox_pending": 2,
+          "settlement_outbox_load_failures": 0,
+          "settlement_outbox_mark_failures": 0,
+          "settlement_outbox_record_failures": 0,
+          "mysql_connection_attempts": 2,
+          "mysql_connection_successes": 2,
+          "mysql_connection_failures": 0,
+          "mysql_connection_losses": 0,
+          "redis_connection_failures": 0,
+          "redis_apply_failures": 2,
+          "replays_saved": 2,
+          "replay_save_failures": 0,
+          "recovery_checkpoint_attempts": 82,
+          "recovery_checkpoint_successes": 82,
+          "recovery_checkpoint_failures": 0,
+          "recovery_checkpoint_bytes_total": 649953,
+          "recovery_checkpoint_bytes_max": 14201,
+          "recovery_checkpoint_serialize_us_total": 3312,
+          "recovery_checkpoint_write_us_total": 1460054,
+          "recovery_checkpoint_write_us_max": 39738,
+          "recovery_checkpoint_lock_wait_us_total": 2,
+          "recovery_checkpoint_connection_us_total": 21511,
+          "recovery_checkpoint_sql_us_total": 121507,
+          "recovery_checkpoint_commit_us_total": 1137006,
+          "recovery_checkpoint_queue_wait_us_total": 176034,
+          "recovery_checkpoint_batches": 82,
+          "recovery_checkpoint_batch_items_max": 1
+        },
+        "proto_v1": {
+          "active_sessions": 5,
+          "send_queue_high_watermark_bytes": 1333,
+          "send_frames_enqueued": 420,
+          "settlement_latency_ms_max": 24,
+          "recovery_checkpoint_bytes_total": 649953,
+          "settlement_outbox_applied": 0,
+          "replay_save_failures": 0,
+          "recovery_checkpoint_attempts": 82,
+          "recovery_checkpoint_successes": 82,
+          "room_command_queue_high_watermark": 1,
+          "recovery_checkpoint_failures": 0,
+          "redis_connection_failures": 0,
+          "recovery_checkpoint_batches": 82,
+          "settlement_latency_ms_total": 41,
+          "settlement_outbox_pending": 2,
+          "settlement_outbox_load_failures": 0,
+          "recovery_checkpoint_lock_wait_us_total": 2,
+          "settlements_succeeded": 2,
+          "mysql_connection_failures": 0,
+          "recovery_checkpoint_commit_us_total": 1137006,
+          "recovery_checkpoint_batch_items_max": 1,
+          "recovery_checkpoint_bytes_max": 14201,
+          "redis_apply_failures": 2,
+          "room_commands_enqueued": 86,
+          "recovery_checkpoint_write_us_total": 1460054,
+          "settlements_failed": 0,
+          "settlement_retries": 0,
+          "settlements_started": 2,
+          "recovery_checkpoint_connection_us_total": 21511,
+          "recovery_checkpoint_write_us_max": 39738,
+          "room_commands_processed": 86,
+          "mysql_connection_successes": 2,
+          "settlement_outbox_mark_failures": 0,
+          "send_frames_dropped": 0,
+          "recovery_checkpoint_queue_wait_us_total": 176034,
+          "mysql_connection_losses": 0,
+          "replays_saved": 2,
+          "settlement_outbox_record_failures": 0,
+          "recovery_checkpoint_serialize_us_total": 3312,
+          "settlement_outbox_failures": 2,
+          "active_rooms": 0,
+          "mysql_connection_attempts": 2,
+          "recovery_checkpoint_sql_us_total": 121507
+        }
+      },
+      "fastapi_metrics": {
+        "transport": "tcp-framed-key-value",
+        "active_rooms": 0,
+        "active_sessions": 5,
+        "room_commands_enqueued": 86,
+        "room_commands_processed": 86,
+        "room_command_queue_high_watermark": 1,
+        "send_frames_enqueued": 421,
+        "send_frames_dropped": 0,
+        "send_queue_high_watermark_bytes": 1455,
+        "settlements_started": 2,
+        "settlements_succeeded": 2,
+        "settlements_failed": 0,
+        "settlement_retries": 0,
+        "settlement_latency_ms_total": 41,
+        "settlement_latency_ms_max": 24,
+        "settlement_outbox_applied": 0,
+        "settlement_outbox_failures": 2,
+        "settlement_outbox_pending": 2,
+        "settlement_outbox_load_failures": 0,
+        "settlement_outbox_mark_failures": 0,
+        "settlement_outbox_record_failures": 0,
+        "mysql_connection_attempts": 2,
+        "mysql_connection_successes": 2,
+        "mysql_connection_failures": 0,
+        "mysql_connection_losses": 0,
+        "redis_connection_failures": 0,
+        "redis_apply_failures": 2,
+        "replays_saved": 2,
+        "replay_save_failures": 0,
+        "recovery_checkpoint_attempts": 82,
+        "recovery_checkpoint_successes": 82,
+        "recovery_checkpoint_failures": 0,
+        "recovery_checkpoint_bytes_total": 649953,
+        "recovery_checkpoint_bytes_max": 14201,
+        "recovery_checkpoint_serialize_us_total": 3312,
+        "recovery_checkpoint_write_us_total": 1460054,
+        "recovery_checkpoint_write_us_max": 39738,
+        "recovery_checkpoint_lock_wait_us_total": 2,
+        "recovery_checkpoint_connection_us_total": 21511,
+        "recovery_checkpoint_sql_us_total": 121507,
+        "recovery_checkpoint_commit_us_total": 1137006,
+        "recovery_checkpoint_queue_wait_us_total": 176034,
+        "recovery_checkpoint_batches": 82,
+        "recovery_checkpoint_batch_items_max": 1
+      },
+      "proxy_during_fault": {
+        "accepted_connections": 2,
+        "upstream_connections": 1,
+        "blocked_connections": 1,
+        "refused_connections": 0,
+        "blocked_bytes": 625,
+        "upstream_request_bytes": 0,
+        "upstream_reply_bytes": 0,
+        "lost_replies": 0,
+        "upstream_failures": 0,
+        "mode": "blackhole",
+        "active_connections": 0,
+        "events": [
+          {
+            "event": "started",
+            "mode": "pass",
+            "port": 39629
+          },
+          {
+            "event": "mode-changed",
+            "mode": "blackhole",
+            "previous": "pass"
+          },
+          {
+            "event": "connection-blocked",
+            "mode": "blackhole",
+            "connection": 2
+          }
+        ]
+      },
+      "replays_verified": 2
+    },
+    {
+      "protocol": "text_v1",
+      "scenario": "successful_lua_reply_loss",
+      "passed": true,
+      "terminal_action_to_both_results_ms": 38.467,
+      "eval_integer_replies": [
+        1,
+        0
+      ],
+      "outbox": {
+        "status": "applied",
+        "attempts": 1,
+        "last_error": ""
+      },
+      "redis_ratings": [
+        1010,
+        990
+      ],
+      "failure_metrics": {
+        "redis_apply_failures": 1,
+        "settlement_outbox_failures": 1
+      },
+      "replays_verified": 1
+    },
+    {
+      "protocol": "proto_v1",
+      "scenario": "blackhole",
+      "passed": true,
+      "simultaneous_rooms": 2,
+      "results_delivered_before_restore": 4,
+      "observed_commit_to_both_rooms_results_ms": 0,
+      "terminal_action_to_both_results_ms": [
+        45.895,
+        43.202
+      ],
+      "result_bound_ms": 2000,
+      "fault_duration_ms": 1892.939,
+      "outbox_during_fault": [
+        {
+          "status": "pending",
+          "attempts": 2,
+          "last_error": "Redis response read timed out"
+        },
+        {
+          "status": "pending",
+          "attempts": 0,
+          "last_error": ""
+        }
+      ],
+      "outbox_after_restore": [
+        {
+          "status": "applied",
+          "attempts": 2,
+          "last_error": ""
+        },
+        {
+          "status": "applied",
+          "attempts": 0,
+          "last_error": ""
+        }
+      ],
+      "fault_metrics": {
+        "text_v1": {
+          "active_rooms": 0,
+          "active_sessions": 5,
+          "room_commands_enqueued": 92,
+          "room_commands_processed": 92,
+          "room_command_queue_high_watermark": 1,
+          "send_frames_enqueued": 424,
+          "send_frames_dropped": 0,
+          "send_queue_high_watermark_bytes": 1455,
+          "settlements_started": 5,
+          "settlements_succeeded": 5,
+          "settlements_failed": 0,
+          "settlement_retries": 0,
+          "settlement_latency_ms_total": 45,
+          "settlement_latency_ms_max": 20,
+          "settlement_outbox_applied": 0,
+          "settlement_outbox_failures": 2,
+          "settlement_outbox_pending": 2,
+          "settlement_outbox_load_failures": 0,
+          "settlement_outbox_mark_failures": 0,
+          "settlement_outbox_record_failures": 0,
+          "mysql_connection_attempts": 2,
+          "mysql_connection_successes": 2,
+          "mysql_connection_failures": 0,
+          "mysql_connection_losses": 0,
+          "redis_connection_failures": 0,
+          "redis_apply_failures": 2,
+          "replays_saved": 5,
+          "replay_save_failures": 0,
+          "recovery_checkpoint_attempts": 88,
+          "recovery_checkpoint_successes": 88,
+          "recovery_checkpoint_failures": 0,
+          "recovery_checkpoint_bytes_total": 787860,
+          "recovery_checkpoint_bytes_max": 15481,
+          "recovery_checkpoint_serialize_us_total": 4417,
+          "recovery_checkpoint_write_us_total": 1682338,
+          "recovery_checkpoint_write_us_max": 84312,
+          "recovery_checkpoint_lock_wait_us_total": 1,
+          "recovery_checkpoint_connection_us_total": 21184,
+          "recovery_checkpoint_sql_us_total": 129753,
+          "recovery_checkpoint_commit_us_total": 1332014,
+          "recovery_checkpoint_queue_wait_us_total": 190151,
+          "recovery_checkpoint_batches": 86,
+          "recovery_checkpoint_batch_items_max": 3
+        },
+        "proto_v1": {
+          "active_sessions": 5,
+          "active_rooms": 0,
+          "settlement_latency_ms_max": 20,
+          "recovery_checkpoint_queue_wait_us_total": 190151,
+          "send_frames_dropped": 0,
+          "settlement_outbox_applied": 0,
+          "replay_save_failures": 0,
+          "recovery_checkpoint_attempts": 88,
+          "recovery_checkpoint_successes": 88,
+          "room_command_queue_high_watermark": 1,
+          "recovery_checkpoint_failures": 0,
+          "redis_connection_failures": 0,
+          "recovery_checkpoint_batches": 86,
+          "settlement_latency_ms_total": 45,
+          "settlement_outbox_pending": 2,
+          "settlement_outbox_load_failures": 0,
+          "recovery_checkpoint_lock_wait_us_total": 1,
+          "settlements_succeeded": 5,
+          "mysql_connection_failures": 0,
+          "recovery_checkpoint_commit_us_total": 1332014,
+          "recovery_checkpoint_batch_items_max": 3,
+          "send_queue_high_watermark_bytes": 1455,
+          "redis_apply_failures": 2,
+          "room_commands_enqueued": 92,
+          "recovery_checkpoint_write_us_total": 1682338,
+          "settlements_failed": 0,
+          "settlement_retries": 0,
+          "settlements_started": 5,
+          "recovery_checkpoint_connection_us_total": 21184,
+          "recovery_checkpoint_write_us_max": 84312,
+          "room_commands_processed": 92,
+          "mysql_connection_successes": 2,
+          "settlement_outbox_mark_failures": 0,
+          "recovery_checkpoint_sql_us_total": 129753,
+          "recovery_checkpoint_bytes_max": 15481,
+          "recovery_checkpoint_serialize_us_total": 4417,
+          "replays_saved": 5,
+          "settlement_outbox_record_failures": 0,
+          "send_frames_enqueued": 426,
+          "mysql_connection_attempts": 2,
+          "settlement_outbox_failures": 2,
+          "mysql_connection_losses": 0,
+          "recovery_checkpoint_bytes_total": 787860
+        }
+      },
+      "fastapi_metrics": {
+        "transport": "tcp-framed-key-value",
+        "active_rooms": 0,
+        "active_sessions": 5,
+        "room_commands_enqueued": 92,
+        "room_commands_processed": 92,
+        "room_command_queue_high_watermark": 1,
+        "send_frames_enqueued": 427,
+        "send_frames_dropped": 0,
+        "send_queue_high_watermark_bytes": 1455,
+        "settlements_started": 5,
+        "settlements_succeeded": 5,
+        "settlements_failed": 0,
+        "settlement_retries": 0,
+        "settlement_latency_ms_total": 45,
+        "settlement_latency_ms_max": 20,
+        "settlement_outbox_applied": 0,
+        "settlement_outbox_failures": 2,
+        "settlement_outbox_pending": 2,
+        "settlement_outbox_load_failures": 0,
+        "settlement_outbox_mark_failures": 0,
+        "settlement_outbox_record_failures": 0,
+        "mysql_connection_attempts": 2,
+        "mysql_connection_successes": 2,
+        "mysql_connection_failures": 0,
+        "mysql_connection_losses": 0,
+        "redis_connection_failures": 0,
+        "redis_apply_failures": 2,
+        "replays_saved": 5,
+        "replay_save_failures": 0,
+        "recovery_checkpoint_attempts": 88,
+        "recovery_checkpoint_successes": 88,
+        "recovery_checkpoint_failures": 0,
+        "recovery_checkpoint_bytes_total": 787860,
+        "recovery_checkpoint_bytes_max": 15481,
+        "recovery_checkpoint_serialize_us_total": 4417,
+        "recovery_checkpoint_write_us_total": 1682338,
+        "recovery_checkpoint_write_us_max": 84312,
+        "recovery_checkpoint_lock_wait_us_total": 1,
+        "recovery_checkpoint_connection_us_total": 21184,
+        "recovery_checkpoint_sql_us_total": 129753,
+        "recovery_checkpoint_commit_us_total": 1332014,
+        "recovery_checkpoint_queue_wait_us_total": 190151,
+        "recovery_checkpoint_batches": 86,
+        "recovery_checkpoint_batch_items_max": 3
+      },
+      "proxy_during_fault": {
+        "accepted_connections": 2,
+        "upstream_connections": 1,
+        "blocked_connections": 1,
+        "refused_connections": 0,
+        "blocked_bytes": 627,
+        "upstream_request_bytes": 0,
+        "upstream_reply_bytes": 0,
+        "lost_replies": 0,
+        "upstream_failures": 0,
+        "mode": "blackhole",
+        "active_connections": 0,
+        "events": [
+          {
+            "event": "started",
+            "mode": "pass",
+            "port": 38163
+          },
+          {
+            "event": "mode-changed",
+            "mode": "blackhole",
+            "previous": "pass"
+          },
+          {
+            "event": "connection-blocked",
+            "mode": "blackhole",
+            "connection": 2
+          }
+        ]
+      },
+      "replays_verified": 2
+    },
+    {
+      "protocol": "proto_v1",
+      "scenario": "successful_lua_reply_loss",
+      "passed": true,
+      "terminal_action_to_both_results_ms": 41.752,
+      "eval_integer_replies": [
+        1,
+        0
+      ],
+      "outbox": {
+        "status": "applied",
+        "attempts": 1,
+        "last_error": ""
+      },
+      "redis_ratings": [
+        1010,
+        990
+      ],
+      "failure_metrics": {
+        "redis_apply_failures": 1,
+        "settlement_outbox_failures": 1
+      },
+      "replays_verified": 1
+    },
+    {
+      "protocol": "text_v1",
+      "scenario": "redis_disabled_draw_behind_rated_backlog",
+      "passed": true,
+      "rated_pending_rows_preserved": 256,
+      "draw_outbox": "applied",
+      "draw_ratings": [
+        1000,
+        1000
+      ],
+      "replays_verified": 1,
+      "terminal_action_to_both_results_ms": 38.933
+    }
+  ],
+  "harness_sha256": "885436638c4812bcbb08579e626c2a6c5c121a55ec4b2f32983be472727b8923",
+  "server_sha256": "6515a60e05fe389a8830a1eb04665a2fead760d2cb570db1bdf42b2b1cfa5bcb",
+  "configuration": {
+    "ARENA_ROOM_RECOVERY": "1",
+    "ARENA_MYSQL_CLEANUP_RUNNING": "0",
+    "ARENA_MYSQL_POOL_SIZE": "2",
+    "ARENA_CHECKPOINT_BATCH_SIZE": "16",
+    "ARENA_REDIS_FAIL_APPLY_COUNT": "0",
+    "ARENA_REDIS_CONNECT_TIMEOUT_MS": "100",
+    "ARENA_REDIS_IO_TIMEOUT_MS": "100"
+  },
+  "sanitizer_reports": [],
+  "fixtures_cleaned": true
+}

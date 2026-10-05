@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "fixtures_cleaned": true,
+  "results": [
+    {
+      "protocol": "text_v1",
+      "sql_status": "finished",
+      "result_rows": 1,
+      "outbox_rows": 1,
+      "outbox_status": "applied",
+      "mysql_ratings": [
+        1010,
+        990
+      ],
+      "redis_ratings": [
+        1010,
+        990
+      ],
+      "cache_idempotency_marker": true,
+      "passed": true,
+      "fixtures_cleaned": true
+    },
+    {
+      "protocol": "proto_v1",
+      "sql_status": "finished",
+      "result_rows": 1,
+      "outbox_rows": 1,
+      "outbox_status": "applied",
+      "mysql_ratings": [
+        1010,
+        990
+      ],
+      "redis_ratings": [
+        1010,
+        990
+      ],
+      "cache_idempotency_marker": true,
+      "passed": true,
+      "fixtures_cleaned": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "runs": [
+    {
+      "exit_code": 0,
+      "build_configuration": "release"
+    },
+    {
+      "exit_code": 0,
+      "build_configuration": "sanitizers"
+    }
+  ],
+  "fixtures_cleaned": true
+}

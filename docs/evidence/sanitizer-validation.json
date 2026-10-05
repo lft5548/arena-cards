@@ -1,0 +1,22 @@
+{
+  "cxx_standard": 17,
+  "test_faults": true,
+  "commands": [
+    {
+      "name": "configure",
+      "exit_code": 0
+    },
+    {
+      "name": "build",
+      "exit_code": 0
+    },
+    {
+      "name": "ctest",
+      "exit_code": 0
+    }
+  ],
+  "passed": true,
+  "instrumented_units": 37,
+  "detector_probes_passed": true,
+  "sanitizer_reports": []
+}

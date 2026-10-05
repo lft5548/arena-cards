@@ -1,0 +1,10 @@
+id,name,cost,effect,value,duration
+1,Strike,2,damage,8,0
+2,Mend,1,heal,4,0
+3,Barrier,1,shield,6,0
+7,Venom,1,poison,3,2
+8,Renew,1,regen,3,2
+9,Disrupt,2,discard,2,0
+10,Ember,1,burn,3,2
+11,Focus,1,attack_boost,2,2
+12,Bless,1,heal_boost,2,2

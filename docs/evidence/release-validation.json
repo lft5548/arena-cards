@@ -1,0 +1,16 @@
+{
+  "scope": "Service implementation validation preceding demonstration packaging",
+  "source_commit": "671675e",
+  "platforms": {
+    "windows_release": {
+      "passed": 48,
+      "failed": 0,
+      "original_log_sha256": "8be51aa09eee068b135f26b1e29e1ebcbeb4eba26604cd5df5d00156ed0176ea"
+    },
+    "linux_release": {
+      "passed": 46,
+      "failed": 0,
+      "original_log_sha256": "09223e5d0cbe57a751edb94945cbea583cf03e16af72093cb0e63536a8573bdc"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <LangVersion>9.0</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <ArenaRepositoryRoot Condition="'$(ArenaRepositoryRoot)' == ''">$(MSBuildThisFileDirectory)../..</ArenaRepositoryRoot>
+    <ArenaClientRoot Condition="'$(ArenaClientRoot)' == ''">$(ArenaRepositoryRoot)/client_unity/Assets/Scripts</ArenaClientRoot>
+    <ArenaGeneratedRoot Condition="'$(ArenaGeneratedRoot)' == ''">$(ArenaRepositoryRoot)/client_unity/Assets/Scripts/Generated</ArenaGeneratedRoot>
+    <ArenaProtobufDll Condition="'$(ArenaProtobufDll)' == ''">$(ArenaRepositoryRoot)/client_unity/Assets/Plugins/Protobuf/Google.Protobuf.dll</ArenaProtobufDll>
+    <NoWarn>$(NoWarn);CS8981</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(ArenaClientRoot)/ArenaProtocol.cs" Link="Client/ArenaProtocol.cs" />
+    <Compile Include="$(ArenaClientRoot)/ArenaProtoCodec.cs" Link="Client/ArenaProtoCodec.cs" />
+    <Compile Include="$(ArenaClientRoot)/ArenaClient.cs" Link="Client/ArenaClient.cs" />
+    <Compile Include="$(ArenaRepositoryRoot)/client_unity/Assets/Scripts/ArenaDemoController.cs" Link="Client/ArenaDemoController.cs" />
+    <Compile Include="$(ArenaClientRoot)/ArenaDemoState.cs" Link="Client/ArenaDemoState.cs" />
+    <Compile Include="$(ArenaClientRoot)/ArenaCardCatalog.cs" Link="Client/ArenaCardCatalog.cs" />
+    <Compile Include="$(ArenaGeneratedRoot)/ArenaCards.cs" Link="Generated/ArenaCards.cs" />
+    <Reference Include="Google.Protobuf">
+      <HintPath>$(ArenaProtobufDll)</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>$(ArenaRepositoryRoot)/client_unity/Assets/Plugins/Protobuf/System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

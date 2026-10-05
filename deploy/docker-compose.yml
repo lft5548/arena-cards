@@ -1,0 +1,98 @@
+services:
+  mysql:
+    image: ${ARENA_IMAGE_REGISTRY:-docker.io/library}/mysql:8.0
+    container_name: arena-cards-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: arena_cards
+      MYSQL_USER: arena
+      MYSQL_PASSWORD: arena_dev_password
+      MYSQL_ROOT_PASSWORD: root_dev_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./schema.sql:/docker-entrypoint-initdb.d/001_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root -proot_dev_password"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: ${ARENA_IMAGE_REGISTRY:-docker.io/library}/redis:7-alpine
+    container_name: arena-cards-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  arena-server:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+      args:
+        ARENA_BASE_IMAGE: ${ARENA_BASE_IMAGE:-ubuntu:24.04}
+    container_name: arena-cards-server
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      ARENA_BIND_ADDRESS: 0.0.0.0
+      ARENA_PORT: 9000
+      ARENA_MAX_CONNECTIONS: ${ARENA_MAX_CONNECTIONS:-512}
+      ARENA_REQUEST_RATE_PER_SECOND: ${ARENA_REQUEST_RATE_PER_SECOND:-200}
+      ARENA_REQUEST_BURST: ${ARENA_REQUEST_BURST:-400}
+      ARENA_HEARTBEAT_TIMEOUT_MS: ${ARENA_HEARTBEAT_TIMEOUT_MS:-30000}
+      ARENA_SHUTDOWN_TIMEOUT_MS: ${ARENA_SHUTDOWN_TIMEOUT_MS:-10000}
+      ARENA_MYSQL_ENABLED: "1"
+      ARENA_MYSQL_REQUIRED: "1"
+      ARENA_MYSQL_HOST: mysql
+      ARENA_MYSQL_PORT: 3306
+      ARENA_MYSQL_DATABASE: arena_cards
+      ARENA_MYSQL_USER: arena
+      ARENA_MYSQL_PASSWORD: arena_dev_password
+      ARENA_MYSQL_POOL_SIZE: ${ARENA_MYSQL_POOL_SIZE:-1}
+      ARENA_MYSQL_CLEANUP_RUNNING: ${ARENA_MYSQL_CLEANUP_RUNNING:-1}
+      ARENA_MYSQL_LOCK_NAME: arena_cards_compose
+      ARENA_ROOM_RECOVERY: ${ARENA_ROOM_RECOVERY:-0}
+      ARENA_ROOM_RECOVERY_MODE: ${ARENA_ROOM_RECOVERY_MODE:-full}
+      ARENA_ROOM_RECOVERY_SNAPSHOT_INTERVAL: ${ARENA_ROOM_RECOVERY_SNAPSHOT_INTERVAL:-16}
+      ARENA_CHECKPOINT_BATCH_SIZE: ${ARENA_CHECKPOINT_BATCH_SIZE:-16}
+      ARENA_REDIS_URL: redis://redis:6379/0
+      ARENA_REDIS_ENABLED: "1"
+      ARENA_REDIS_HOST: redis
+      ARENA_REDIS_PORT: 6379
+      ARENA_REDIS_CONNECT_TIMEOUT_MS: ${ARENA_REDIS_CONNECT_TIMEOUT_MS:-1000}
+      ARENA_REDIS_IO_TIMEOUT_MS: ${ARENA_REDIS_IO_TIMEOUT_MS:-1000}
+      ARENA_REDIS_FAIL_APPLY_COUNT: ${ARENA_REDIS_FAIL_APPLY_COUNT:-0}
+      ARENA_OUTBOX_POLL_SECONDS: ${ARENA_OUTBOX_POLL_SECONDS:-2}
+      ARENA_CONFIG_DIR: /app/config
+      ARENA_REPLAY_DIR: /app/replays
+    ports:
+      - "9000:9000"
+    volumes:
+      - replay_data:/app/replays
+    stop_signal: SIGTERM
+    stop_grace_period: 15s
+    # Metrics HTTP endpoint is reserved for a later iteration.
+    healthcheck:
+      test: ["CMD", "nc", "-z", "127.0.0.1", "9000"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  mysql_data:
+  redis_data:
+  replay_data:

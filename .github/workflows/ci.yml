@@ -1,0 +1,28 @@
+name: arena-cards-ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build Linux test environment
+        run: docker build -f deploy/Dockerfile.sanitizers -t arena-cards-sanitizers deploy
+      - name: ASan and UBSan CTest
+        run: >-
+          docker run --rm
+          --mount "type=bind,source=$PWD,target=/workspace"
+          arena-cards-sanitizers --parallel 2
+      - name: Preserve sanitizer evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-sanitizers
+          path: |
+            build-sanitizers/sanitizer-runs/
+            build-sanitizers/compile_commands.json
+            build-sanitizers/Testing/Temporary/LastTestsFailed.log
+          if-no-files-found: warn

@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "publication": "Measurements and binary hashes retained; local paths, identities, calendar metadata and logs omitted.",
+  "files": [
+    {
+      "file": "docs/evidence/demo-graceful.json",
+      "source_sha256": "e89b0449348d40eeeafb43e16ee1ba0d536c146955df2d971edf5f229a486c28",
+      "published_sha256": "c13010d5b16a3d4b5c70309499ad30ae7179fc78c20ced9d3a855e185542955c",
+      "bytes": 1720
+    },
+    {
+      "file": "docs/evidence/demo-redis.json",
+      "source_sha256": "eb28292f9ec2354ba4e7065c0e3cff7b13cc11312b2192461ebe234d1b9b80fd",
+      "published_sha256": "b1d3d655db498242f59741cffaecbbedc460bc81faf6215e2163ff67c7d2c413",
+      "bytes": 17966
+    },
+    {
+      "file": "docs/evidence/demo-unity.json",
+      "source_sha256": "aae060158d38a080e2c0b66b1d87d4f7444bd9bcd9f9bd3747078522a38239f2",
+      "published_sha256": "b552502ec58ce93044e60552d3e241e3adaa8b24b06dca627d4d7f0e998dc19f",
+      "bytes": 807
+    },
+    {
+      "file": "docs/evidence/network-boundaries.json",
+      "source_sha256": null,
+      "published_sha256": "99d164a95c7e19bfdb0db9bd7dc196ae55d8ac6122a9f00fe13130d89b340411",
+      "bytes": 5124
+    },
+    {
+      "file": "docs/evidence/redis-reliability.json",
+      "source_sha256": "d2cfadf6aba03f8c1c89c23da8adf151fac4cba6ec6f630a87d5834a304aa0aa",
+      "published_sha256": "91149350c1e6e0cabd1a39b44ebe94e14604f8bd453f9fae2dd3f0f33a9cd538",
+      "bytes": 17670
+    },
+    {
+      "file": "docs/evidence/release-validation.json",
+      "source_sha256": null,
+      "published_sha256": "16e256488c5df1a3d9ef29b3fdb1a5ef3f6b85965751aa633e0f3830f95ebdf7",
+      "bytes": 484
+    },
+    {
+      "file": "docs/evidence/sanitizer-validation.json",
+      "source_sha256": "341217f98a5094796bf15307279d4522507379b35134e8b5c8f3d8366e2b0f6d",
+      "published_sha256": "3fa48d38cbb48f439ca0fcb6b1228a41f9941d4699d6738238f352edd2d9d3c3",
+      "bytes": 350
+    },
+    {
+      "file": "docs/evidence/tail-fault-release.json",
+      "source_sha256": "91a05ef85120be08a818d7ba0d7bcd354873c4b476cc63b94487648a6404deb0",
+      "published_sha256": "bb648dd8aeabfcc61d49356f68c88c7cf9d867b0bebdcae3819b05d979334790",
+      "bytes": 12033
+    },
+    {
+      "file": "docs/evidence/tail-fault-sanitizer.json",
+      "source_sha256": "b28d6508f0dbcc54f46be3dac13e179576c4bf8c5b8ecf238e7b13060c3df7d4",
+      "published_sha256": "41cde3e5c2ccf3fb1246c01fd0aec64cd8020188ee6d858769f6119cac2daaf8",
+      "bytes": 12040
+    },
+    {
+      "file": "docs/evidence/tail-owner.json",
+      "source_sha256": "068fcc9121bcfd30602e868ddef45b2b5f240acb376b69855d410ec220bd416f",
+      "published_sha256": "0b8744756274cc8a6e2f119d5f35b8310e344273abacf4343a56078c92486e4a",
+      "bytes": 230
+    },
+    {
+      "file": "docs/load-test-compose-4.json",
+      "source_sha256": "ed09519514f142bb29c551e0e4cf3bffddc3f503570345cc324d48d916240244",
+      "published_sha256": "b8d61507ef6366f8d016070e79b3ab647c1cf11a60c69836b6cf1c931cda613c",
+      "bytes": 6261
+    },
+    {
+      "file": "docs/load-tests/100-bot.json",
+      "source_sha256": "c77a3e5bf30122e06ce4704379788f39851d019c21e949b07509327ad2a15a14",
+      "published_sha256": "ac2af2eec5b89ef9401ea3d5672b16814dd2e5f2f95ba66ae91da6c05db8edad",
+      "bytes": 145847
+    },
+    {
+      "file": "docs/load-tests/20-bot.json",
+      "source_sha256": "82e4bcd33966f11fcab17f8a5ae86d27d00678ba22b99faf24a09e1b5a9f00ba",
+      "published_sha256": "bf0d766596f2bb3cbd4dca67a713b0c22e86a369fc763074abb2876e12cf9027",
+      "bytes": 29778
+    },
+    {
+      "file": "docs/load-tests/200-bot.json",
+      "source_sha256": "22ba862fc7d3baaae4b1acae3245c8d6e21bff6f21b73639be106948202b3c5e",
+      "published_sha256": "20e5d85e73e64c00e6ff7a58522b0c4b0be5091a25426dffbdf3089705e70700",
+      "bytes": 294779
+    },
+    {
+      "file": "docs/load-tests/matrix.json",
+      "source_sha256": "8e668cb011e7cec91a8d23c873a9af343f0725003fc1120c4023b0240cf68870",
+      "published_sha256": "707171786c5423ab7a299421c6dab345c852746c541fccaadaf2633e887446f9",
+      "bytes": 558208
+    },
+    {
+      "file": "docs/recovery-load-report.jsonl",
+      "source_sha256": "203660acb5f0609dc7d8ccd21737244e07181d61bf8eba2eb3df2637133092f6",
+      "published_sha256": "1fd4cbac9d7f361ac52fdeadbcc54753c4cba18f8f5fe86aad49dc693c4fd1ff",
+      "bytes": 159323
+    },
+    {
+      "file": "docs/recovery-strategy-report.json",
+      "source_sha256": "509ab82df09e71f4ae617c517cd7db961d000fc42cf6130a46b98a57bb752981",
+      "published_sha256": "6fe5d0fc8d3152e24e7335372e4dacc7683be5de57a7b0513601ee7757fa1ec5",
+      "bytes": 158984
+    }
+  ]
+}

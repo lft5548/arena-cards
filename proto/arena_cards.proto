@@ -1,0 +1,121 @@
+syntax = "proto3";
+
+package arena.v1;
+option csharp_namespace = "ArenaCards.Proto";
+
+message RequestContext {
+  string match_id = 1;
+  uint64 turn_id = 2;
+  uint64 action_id = 3;
+  uint64 revision = 4;
+  string request_id = 5;
+}
+
+message ReplayMetadata {
+  uint64 seed = 1;
+  uint64 revision = 2;
+  uint64 digest = 3;
+  bool valid = 4;
+}
+message StatusState { int32 value = 1; int32 turns = 2; }
+message BonusState { int32 value = 1; int32 uses = 2; }
+message PlayerState {
+  int32 hp = 1;
+  int32 energy = 2;
+  int32 shield = 3;
+  StatusState poison = 4;
+  StatusState regen = 5;
+  StatusState burn = 6;
+  BonusState attack_boost = 7;
+  BonusState heal_boost = 8;
+}
+message BattleState {
+  int32 turn = 1;
+  uint64 snapshot_revision = 2;
+  uint32 remaining_ms = 3;
+  bool done = 4;
+  repeated PlayerState players = 5;
+  repeated int32 hand = 6;
+  uint32 opponent_hand_count = 7;
+  uint32 deck_count = 8;
+  repeated int32 discard = 9;
+  uint32 discard_count = 10;
+  uint32 opponent_discard_count = 11;
+  uint64 last_action_id = 12;
+  ReplayMetadata replay = 13;
+}
+message LoginRequest { string user = 1; string request_id = 2; }
+message LoginResponse {
+  bool ok = 1;
+  string user = 2;
+  string session_token = 3;
+  string error_code = 4;
+  string request_id = 5;
+}
+message MatchJoinRequest { string request_id = 1; }
+message MatchJoinResponse { bool queued = 1; string request_id = 2; }
+message MatchCancelRequest { string request_id = 1; }
+message MatchCancelResponse { bool cancelled = 1; string request_id = 2; }
+message MatchFound {
+  RequestContext context = 1;
+  int32 player_index = 2;
+  int32 turn = 3;
+  uint32 room = 4;
+}
+message PlayCardRequest { RequestContext context = 1; int32 card_id = 2; }
+message EndTurnRequest { RequestContext context = 1; }
+message ActionAck { RequestContext context = 1; bool applied = 2; string error_code = 3; }
+message BattleSnapshot {
+  RequestContext context = 1;
+  int32 player_index = 2;
+  BattleState state = 3;
+}
+message BattleEvent {
+  RequestContext context = 1;
+  string type = 2;
+  int32 player = 3;
+  int32 card_id = 4;
+  int32 value = 5;
+  int32 duration = 6;
+  string status = 7;
+  int32 remaining = 8;
+  int32 hp = 9;
+  int32 target = 10;
+  int32 count = 11;
+  string phase = 12;
+  optional int32 bonus = 13;
+  int32 uses = 14;
+}
+message MatchResult {
+  RequestContext context = 1;
+  int32 winner = 2;
+  string reason = 3;
+  ReplayMetadata replay = 4;
+}
+message ReconnectRequest { string session_token = 1; string request_id = 2; }
+message ReconnectResponse {
+  bool ok = 1;
+  RequestContext context = 2;
+  int32 player_index = 3;
+  string error_code = 4;
+}
+message ErrorResponse { string code = 1; string message = 2; RequestContext context = 3; }
+message Heartbeat { string request_id = 1; }
+message Pong { string request_id = 1; }
+message AdminRoomsRequest { string request_id = 1; }
+message AdminRoomsResponse { map<string, uint64> counters = 1; string request_id = 2; }
+message LeaderboardRequest { optional uint32 limit = 1; string request_id = 2; }
+message LeaderboardEntry {
+  uint32 rank = 1;
+  string player_id = 2;
+  int64 rating = 3;
+  uint64 wins = 4;
+  uint64 losses = 5;
+}
+message LeaderboardResponse {
+  bool ok = 1;
+  string error_code = 2;
+  string request_id = 3;
+  string source = 4;
+  repeated LeaderboardEntry entries = 5;
+}

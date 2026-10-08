@@ -20,20 +20,27 @@ jobs:
         if: always()
         shell: bash
         run: |
-          set -u
-          rm -rf ci-artifacts/sanitizers
           mkdir -p ci-artifacts/sanitizers
 
+          # Containers may create sanitizer reports readable only by root.
+          # Copy diagnostic text, excluding probe binaries, before uploading.
           if [ -d build-sanitizers/sanitizer-runs ]; then
-            find build-sanitizers/sanitizer-runs -type f \
-              \( -name summary.json -o -name ctest.xml \) \
-              -exec cp --parents {} ci-artifacts/sanitizers/ \; || true
+            sudo find build-sanitizers/sanitizer-runs -type f \
+              \( -name summary.json -o -name ctest.xml -o -name '*.log' \
+                 -o -name 'asan.*' -o -name 'ubsan.*' \) \
+              -exec cp --parents {} ci-artifacts/sanitizers/ \;
           fi
 
-          cp build-sanitizers/compile_commands.json \
-            ci-artifacts/sanitizers/ 2>/dev/null || true
-          cp build-sanitizers/Testing/Temporary/LastTestsFailed.log \
-            ci-artifacts/sanitizers/ 2>/dev/null || true
+          for source in \
+            build-sanitizers/compile_commands.json \
+            build-sanitizers/Testing/Temporary/LastTestsFailed.log; do
+            if [ -f "$source" ]; then
+              sudo cp "$source" ci-artifacts/sanitizers/
+            fi
+          done
+
+          sudo chown -R "$(id -u):$(id -g)" ci-artifacts/sanitizers
+          chmod -R u+rwX ci-artifacts/sanitizers
 
       - name: Preserve sanitizer evidence
         if: always()

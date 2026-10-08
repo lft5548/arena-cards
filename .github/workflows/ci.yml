@@ -16,13 +16,30 @@ jobs:
           docker run --rm
           --mount "type=bind,source=$PWD,target=/workspace"
           arena-cards-sanitizers --parallel 2
+      - name: Prepare sanitizer evidence
+        if: always()
+        shell: bash
+        run: |
+          set -u
+          rm -rf ci-artifacts/sanitizers
+          mkdir -p ci-artifacts/sanitizers
+
+          if [ -d build-sanitizers/sanitizer-runs ]; then
+            find build-sanitizers/sanitizer-runs -type f \
+              \( -name summary.json -o -name ctest.xml \) \
+              -exec cp --parents {} ci-artifacts/sanitizers/ \; || true
+          fi
+
+          cp build-sanitizers/compile_commands.json \
+            ci-artifacts/sanitizers/ 2>/dev/null || true
+          cp build-sanitizers/Testing/Temporary/LastTestsFailed.log \
+            ci-artifacts/sanitizers/ 2>/dev/null || true
+
       - name: Preserve sanitizer evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: linux-sanitizers
-          path: |
-            build-sanitizers/sanitizer-runs/
-            build-sanitizers/compile_commands.json
-            build-sanitizers/Testing/Temporary/LastTestsFailed.log
+          path: ci-artifacts/sanitizers/
           if-no-files-found: warn
+          compression-level: 0
